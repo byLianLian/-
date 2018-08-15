@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+	<link rel="stylesheet" href="../CSS/reset.css">
+	<script src="../js/jquery-1.12.2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.tab_item').mouseenter(function(){
+				$(this).addClass('tab_item_selected').siblings().removeClass('tab_item_selected');
+				if($(this).index()==0){
+					$('.part').css({'marginLeft':'0px'});
+				}else if($(this).index()==1){
+					$('.part').css({'marginLeft':'-160px'});
+				}else{
+					$('.part').css({'marginLeft':'-320px'});
+				}
+
+			})
+		})
+	</script>
+	<style>
+		.iframe_recharge{
+			color: #666;
+			width: 160px;
+			font-family: 'Microsoft Yahei'; 
+			background-color: #fff;
+		}
+		.tab_iframe{
+			height: 21px;
+			padding-top: 12px;
+			overflow: hidden;
+		}
+		.tab_item{
+			float: left;
+			width: 56px;
+		}
+		.tab_item a{
+			position: relative;
+			display: block;
+			line-height: 16px;
+			color: #666;
+			white-space: nowrap;
+			height: 21px;
+		}
+		.tab_item_selected a {
+		    color: #e40015;
+		}
+
+
+
+		.content_iframe{
+			position: relative;
+			height: 146px;
+		}
+		.form_top{
+			margin-top: 5px;
+			height: auto;
+			overflow: hidden;
+		}
+		.content_iframe dt{
+			float: left;
+			display: inline-block;
+			/*overflow: hidden;*/
+		}
+		.part{
+			width: 500px;
+			transition: all 0.2s ease;
+		}
+		.part li{
+			float: left;
+			width: 160px;
+			height: 180px;
+		}
+		.content_iframe dt label{
+			display: inline-block;
+			width: 34px;
+		}
+		.pr{
+			position: relative;
+		}
+		.pr .input_phone{
+			color: #c2c2c2;
+			float: left;
+			width: 124px;
+			height: 16px;
+			margin:0;
+			line-height: 20px;
+			border: 1px solid #e7e7e7;
+			text-indent: 0.6em;
+		}
+		select {
+		    height: 20px;
+		    border: 1px solid #e7e7e7;
+		    font-family: 'Microsoft Yahei';
+		    letter-spacing: 0;
+		    width: 126px;
+		}
+		.msg_price_box {
+		    padding-top: 5px;
+		}
+		.msg_price {
+		    color: #e40015;
+		    display: block;
+		}
+		.btn_wrap {
+		    margin-top: 5px;
+		    height: 20px;
+		    width: 60px;
+		    display: inline-block;
+		    overflow: hidden;
+		}
+		.btn_submit {
+		    width: 60px;
+		    height: 20px;
+		    background: #e40015;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 18px;
+		    border: 0;
+		    border-radius: 10px;
+		    margin-right: 8px;
+		    font-size: 12px;
+		}
+		.link_ad {
+		    display: inline-block;
+		    height: 20px;
+		    line-height: 20px;
+		    overflow: hidden;
+		    color: #999;
+		}
+		.link_ad a {
+		    color: #5476db;
+		}
+		dd{
+			display: inline;
+		}
+		.select_city {
+		    width: 60px;
+		    height: 20px;
+		    border: 1px solid #e7e7e7;
+		    font-family: 'Microsoft Yahei';
+		}
+		.select_price {
+			float: right;
+		    width: 60px;
+		    height: 20px;
+		    border: 1px solid #e7e7e7;
+		    font-family: 'Microsoft Yahei';
+		}
+		.tip {
+		    display: inline-block;
+		    height: 14px;
+		    line-height: 14px;
+		    vertical-align: top;
+		    color: #e4393c;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    margin: 5px 0;
+		}
+		.icon-hot{
+			display: inline-block;
+		    width: 34px;
+		    height: 14px;
+		    margin-right: 3px;
+		    vertical-align: -3px;
+		    background: url(../image/iframe-hot.png) 0 0 no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="iframe_recharge">
+		<ul class="tab_iframe">
+			<li class="tab_item tab_item_selected"><a href="#">话费充值</a></li>
+			<li class="tab_item"><a href="#">流量充值</a></li>
+			<li class="tab_item" style="width: 48px"><a href="#">套餐变更</a></li>
+		</ul>
+		<div class="content_iframe">
+			<ul class="part">
+				<li class="part1">
+					<dl class="form_top">
+						<dt><label>号码</label></dt>
+						<dd class="pr">
+							<input type="text" class="input_phone" maxlength="11" placeholder="移动/联通/电信" style="color: rgb(153,153,153);">
+						</dd>
+					</dl>
+					<dl class="form_bottom">
+						<dt><label>面值</label></dt>
+						<dd>
+							<select name="" id="select_price_money" class="select_price_money">
+								<option value="10">10元</option>
+								<option value="20">20元</option>
+								<option value="30">40元</option>
+								<option value="50">50元</option>
+								<option value="100" selected="selected">100元</option>
+								<option value="200">200元</option>
+								<option value="300">300元</option>
+								<option value="500">500元</option>
+							</select>
+						</dd>
+						<dd class="msg_price_box">
+							<span class="msg_price">￥98.0-100.0￥</span>
+						</dd>
+					</dl>
+					<div class="btn_wrap">
+						<input type="button" class="btn_submit" value="快速充值">
+					</div>
+					<p class="link_ad"><a href="#"> 抢90减50元话费券</a></p>
+				</li>
+				<li class="part2">
+					<dl class="form_top">
+						<dt><label>号码</label></dt>
+						<dd class="pr">
+							<input type="text" class="input_phone" maxlength="11" placeholder="移动/联通/电信" style="color: rgb(153,153,153);">
+						</dd>
+					</dl>
+					<dl class="form_bottom">
+						<dt><label>面值</label></dt>
+						<dd>
+							<select name="" id="areaSelect" class="select_city">
+								<option>全国</option>
+								<option>省内</option>
+							</select>
+						</dd>
+						<dd>
+							<select name="" id="faceSelect" class="select_price">
+								<option value="50">50M</option>
+								<option value="100">100M</option>
+								<option value="200">200M</option>
+								<option value="300">300M</option>
+								<option value="500">500M</option>
+							</select>
+						</dd>
+					</dl>
+					<dd class="msg_price_box">
+						<span class="msg_price">￥7.5-10.0￥</span>
+					</dd>
+					<div class="btn_wrap">
+						<input type="button" class="btn_submit" value="快速充值">
+					</div>
+					<p class="link_ad"><a href="#">  App Store充值卡</a></p>
+				</li>
+				<li class="part3">
+					<dl class="form_top">
+						<dt><label>号码</label></dt>
+						<dd class="pr">
+							<input type="text" class="input_phone" maxlength="11" placeholder="支持部分地区移动" style="color: rgb(153,153,153);">
+						</dd>
+					</dl>
+					<dl class="form_bottom">
+						<dt><label>月费</label></dt>
+						<dd>
+							<select name="" id="select_price_money" class="select_price_money">
+								<option value="38">38元</option>
+								<option value="48">48元</option>
+								<option value="58">58元</option>
+								<option value="88">88元</option>
+								<option value="138" selected="selected">138元</option>
+								<option value="158">158元</option>
+								<option value="238">238元</option>
+								<option value="268">268元</option>
+								<option value="388">388元</option>
+								<option value="588">588元</option>
+							</select>
+						</dd>
+						<span class="tip">500分钟1G流量</span>
+					</dl>
+					<div class="btn_wrap">
+						<input type="button" class="btn_submit" value="办理变更">
+					</div>
+					<p class="link_ad"><a href="#"><s class="icon-hot"></s> 中国联通199全国不限量</a></p>
+				</li>
+
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>

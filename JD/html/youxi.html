@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+	<link rel="stylesheet" href="../CSS/reset.css">
+	<script src="../js/jquery-1.12.2.min.js"></script>
+</head>
+<style>
+	.squares_game{
+		width: 160px;
+	    height: 180px;
+	    color: #666;
+	    font-family: "Microsoft Yahei";
+	    background-color: #fff;
+	}
+	.squares_tab{
+		padding: 12px 0 0;
+	    position: static;
+	    width: 180px;
+	    height: auto;
+	    /*overflow: hidden;*/
+	}
+	.game_tab{
+		float: left;
+	    position: relative;
+	    display: inline;
+	    line-height: 16px;
+	    white-space: nowrap;
+	    height: 21px;
+	    margin-right: 25px;
+	    width: auto;
+	    border: 0;
+	    overflow: auto;
+	    cursor: default;
+	}
+	.squares_tab li a{
+		text-decoration: none;
+	    line-height: 18px;
+	    display: inline;
+	    padding-top: 0;
+	    text-align: left;
+	}
+	.current a{
+		color: #e40015;
+	}
+	.squares_main{
+	    padding: 4px 0 0;
+	    position: relative;
+	    zoom: 1;
+	    height: 135px;
+	}
+	.squares_content{
+		height: 135px;
+	    width: 180px;
+	    /*overflow: hidden;*/
+	    position: relative;
+	    zoom: 1;
+	}
+	.tab_content{
+		width: 696px;
+	    height: 135px;
+	    overflow: hidden;
+	    transition: all ease 0.2s;
+	}
+	.jp_content{
+		float: left;
+	    display: inline;
+	    height: 135px;
+	    width: 180px;
+	    border: 0;
+	    overflow: hidden;
+	    cursor: default;
+	}
+	.select_city{
+		margin-bottom: 9px;
+	}
+	.city_area{
+		height: 20px;
+	    position: relative;
+	    zoom: 1;
+	}
+	.start_city{
+	    width: 95px;
+	    height: 18px;
+	    line-height: 20px;
+	    border: 1px solid #e7e7e7;
+	    padding: 0;
+	    color: #666;
+	    margin-left: 62px;
+	    font-family: inherit;
+	    text-align: center;
+	}
+	.area_title{
+		float: left;
+		display: inline-block;
+		height: 20px;
+	    line-height: 20px;
+	    color: #666;
+	    position: absolute;
+	    top: 1px;
+	    left: 1px;
+	    width: 62px;
+	}
+	.data_area{
+		position: relative;
+	}
+	.start_date{
+		margin-left: 62px;
+		float: left;
+	    width: 95px;
+	    height: 18px;
+	    line-height: 20px;
+	    border: 1px solid #e7e7e7;
+	    padding: 0;
+	    color: #666!important;
+	    font-family: inherit;
+	    text-indent: .5em;
+	}
+	.game_money{
+		float: left;
+	    display: inline-block;
+	    height: 12px;
+	    line-height: 12px;
+	    color: #e40015;
+	    margin: 10px 0;
+	}
+	.select_type{
+		margin-bottom: 10px;
+    	line-height: 1;
+	}
+	.select_type label{
+		margin-right: 5px;
+	    height: 15px;
+	    line-height: 15px;
+	}
+	.type{
+		margin: 0;
+    	vertical-align: middle;
+	}
+	.search_ip_btn{
+		float: left;
+	    width: 60px;
+	    height: 20px;
+	    margin-right: 5px;
+	    line-height: 20px;
+	    color: #fff;
+	    text-align: center;
+	    background-color: #e40015;
+	    display: inline-block;
+	    padding: 0;
+	    border-radius: 10px;
+	}
+	li:nth-child(2) .city_area input,li:nth-child(2) .data_area input{
+		width: 124px;
+		margin-left: 34px;
+	}
+	li:nth-child(3) .city_area input,li:nth-child(3) .data_area input{
+		width: 124px;
+		margin-left: 34px;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$('.game_tab').mouseenter(function(){
+			$(this).addClass('current').siblings().removeClass('current');
+			if($(this).index()==0){
+				$('.tab_content').css({'marginLeft':'0px'});
+			}else if($(this).index()==1){
+				$('.tab_content').css({'marginLeft':'-180px'});
+			}else{
+				$('.tab_content').css({'marginLeft':'-360px'});
+			}
+		})
+
+	})
+</script>
+<body>
+	<div class="squares_game">
+		<ul class="squares_tab clearfix">
+			<li class="game_tab current"><a href="#">视频/娱乐</a></li>
+			<li class="game_tab"><a href="#">点卡</a></li>
+			<li class="game_tab"><a href="#">QQ</a></li>
+		</ul>
+		<div class="squares_main">
+			<div class="squares_content">
+				<ul class="tab_content clearfix">
+					<li class="jp_content">
+						<div class="select_city clearfix">
+							<div class="city_area">
+								<input type="text" class="start_city" placeholder="类型" style="color: rgb(153, 153, 153);">
+								<span class="area_title">服务类型</span>
+							</div>
+						</div>
+						<div class="select_date clearfix">
+							<div class="data_area">
+								<span class="area_title">充值时长</span>
+								<input type="text" class="start_date" placeholder="时长" readonly="readonly" style="color: rgb(153, 153, 153);">
+								<span class="game_money">￥<span class="game_money_result">19.00</span></span>
+							</div>
+						</div>
+						<div class="select_type clearfix">
+							<label class="game_method_zc" style="display: inline;">
+								<input type="radio" name="type" class="type" checked="checked"><span>直冲</span>
+							</label>
+							<label class="game_method_km" style="display: inline;">
+								<input type="radio" name="type" class="type"><span>卡密</span>
+							</label>
+						</div>
+						<div class="search_jp"><a href="#" class="search_ip_btn">快速充值</a></div>
+					</li>
+					<li class="jp_content">
+						<div class="select_city clearfix">
+							<div class="city_area">
+								<input type="text" class="start_city" placeholder="游戏" style="color: rgb(153, 153, 153);" width="126px">
+								<span class="area_title">游戏</span>
+							</div>
+						</div>
+						<div class="select_date clearfix">
+							<div class="data_area">
+								<span class="area_title">面值</span>
+								<input type="text" class="start_date" placeholder="面值" readonly="readonly" style="color: rgb(153, 153, 153);" width="126px">
+								<span class="game_money">￥<span class="game_money_result">00.00</span></span>
+							</div>
+						</div>
+						<div class="select_type clearfix">
+							<label class="game_method_zc" style="display: inline;">
+								<input type="radio" name="type1" class="type" checked="checked"><span>直冲</span>
+							</label>
+							<label class="game_method_km" style="display: inline;">
+								<input type="radio" name="type1" class="type"><span>卡密</span>
+							</label>
+						</div>
+						<div class="search_jp"><a href="#" class="search_ip_btn">快速充值</a></div>
+					</li>
+					<li class="jp_content">
+						<div class="select_city clearfix">
+							<div class="city_area">
+								<input type="text" class="start_city" placeholder="Q币" style="color: rgb(153, 153, 153);" width="126px">
+								<span class="area_title">QQ</span>
+							</div>
+						</div>
+						<div class="select_date clearfix">
+							<div class="data_area">
+								<span class="area_title">面值</span>
+								<input type="text" class="start_date" placeholder="1元" readonly="readonly" style="color: rgb(153, 153, 153);" width="126px">
+								<span class="game_money">￥<span class="game_money_result">0.98</span></span>
+							</div>
+						</div>
+						<div class="select_type clearfix">
+							<label class="game_method_zc" style="display: inline;">
+								<input type="radio" name="type2" class="type" checked="checked"><span>直冲</span>
+							</label>
+						</div>
+						<div class="search_jp"><a href="#" class="search_ip_btn">快速充值</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

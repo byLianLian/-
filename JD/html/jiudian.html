@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+	<link rel="stylesheet" href="../CSS/reset.css">
+	<script src="../js/jquery-1.12.2.min.js"></script>
+	<style type="text/css">
+		.squares_hotel{
+			margin: 0 auto;
+		    width: 160px;
+		    height: 180px;
+		    color: #666;
+		    font-family: "Microsoft Yahei";
+		    background-color: #fff;
+		}
+		.squares_tab{
+			padding: 12px 0 0;
+		    position: static;
+		    width: auto;
+		    height: auto;
+		    overflow: hidden;
+		}
+		.squares_tab li{
+			float: left;
+		    position: relative;
+		    display: inline;
+		    line-height: 16px;
+		    white-space: nowrap;
+		    height: 21px;
+		    margin-right: 14px;
+		    width: auto;
+		    border: 0;
+		    overflow: auto;
+		    cursor: default;
+		}
+		.squares_tab .current a {
+		    color: #e40015;
+		}
+		.squares_main{
+			padding: 5px 0 0;
+		    position: relative;
+		    zoom: 1;
+		    height: 138px;
+		}
+		.squares_content{
+			height: 138px;
+		    width: 160px;
+		    /*overflow: hidden;*/
+		    position: relative;
+		    zoom: 1;
+		}
+		.tab_content{
+			width: 696px;
+		    height: 138px;
+		   /* overflow: hidden;*/
+		   transition: all ease 0.2s;
+		}
+		.hotel_content{
+			float: left;
+		    display: inline;
+		    height: 138px;
+		    width: 190px;
+		    border: 0;
+		    overflow: hidden;
+		    cursor: default;
+
+		}
+		.city_area{
+			float: left;
+		    display: inline;
+		    width: 190px;
+		    height: 20px;
+		    margin-bottom: 5px;
+		    position: relative;
+		    zoom: 1;
+		}
+		.select_data{
+			margin-bottom: 4px;
+		    height: 56px;
+		}
+		.search_jp{
+			clear: both;
+		    height: 20px;
+		    padding-top: 5px;
+		}
+		.start_city{
+			width: 103px;
+		    height: 18px;
+		    line-height: 20px;
+		    border: 1px solid #e7e7e7;
+		    padding: 0;
+		    color: #c2c2c2;
+		    margin-left: 55px;
+		    font-family: inherit;
+		    text-indent: .75em;
+		    font-size: 12px;
+		}
+		.area_title{
+			height: 20px;
+		    line-height: 16px;
+		    color: #666;
+		    position: absolute;
+		    top: 1px;
+		    left: 1px;
+		    width: 55px;
+		}
+		.select_area{
+			color: #999;
+		    width: 158px;
+		    margin-left: 0;
+		    text-align: center;
+		    height: 18px;
+		    line-height: 20px;
+		    border: 1px solid #e7e7e7;
+		    padding: 0;
+		    font-family: inherit;
+		    text-indent: .75em;
+		    font-size: 12px;
+		}
+		.search_hotel_btn{
+			float: left;
+		    width: 60px;
+		    height: 20px;
+		    line-height: 18px;
+		    color: #fff;
+		    text-align: center;
+		    background-color: #e40015;
+		    display: inline-block;
+		    border-radius: 10px;
+		    margin-right: 25px;
+		    padding: 0;
+		}
+		.serch_tip{
+			outline: 0;
+		    color: #527cdb;
+		    line-height: 20px;
+		    display: inline;
+		    padding-top: 0;
+		    text-align: left;
+		}
+		.hotel_ads{
+			width: 160px;
+		}
+		.hotel_ad{
+			display: inline;
+		    width: auto;
+		    height: auto;
+		    padding: 0;
+		    line-height: normal;
+		    text-align: left;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+		.ad_left img{
+			float: left;
+			width: 75px;
+			height: 96px;
+		}
+		.ad_right img{
+			float: right;
+			width: 75px;
+			height: 96px;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('.hotel_tab').mouseenter(function(){
+				$(this).addClass('current').siblings().removeClass('current');
+				if($(this).index()==0){
+					$('.tab_content').css({'marginLeft':'0px'});
+				}
+				else{
+					$('.tab_content').css({'marginLeft':'-190px'});
+				}
+			})
+
+		})
+	</script>
+<body>
+	<div class="squares_hotel">
+		<ul class="squares_tab">
+			<li class="hotel_tab current"><a href="#">国内/港澳台</a></li>
+			<li class="hotel_tab"><a href="#">促销活动</a></li>
+		</ul>
+		<div class="squares_main">
+			<div class="squares_content">
+				<ul class="tab_content">
+					<li class="hotel_content">
+						<div class="city_area">
+							<input type="text" placeholder="请输入目的地" maxlength="10" style="color: rgb(194, 194, 194);" class="start_city">
+							<span class="area_title">目的地</span>
+						</div>
+						<div class="select_data">
+							<div class="city_area">
+								<input type="text" placeholder="入住日期" maxlength="10" style="color: rgb(194, 194, 194);" class="start_city">
+								<span class="area_title">入住日期</span>
+							</div>
+							<div class="city_area">
+								<input type="text" placeholder="离店日期" maxlength="10" style="color: rgb(194, 194, 194);" class="start_city">
+								<span class="area_title">离店日期</span>
+							</div>
+						</div>
+						<div class="city_area">
+							<input type="text" placeholder="酒店/商圈/地标" maxlength="10" style="color: rgb(194, 194, 194);" class="select_area">
+						</div>
+						<div class="search_jp">
+							<a href="#" class="search_hotel_btn">酒店查询</a>
+							<span class="word_ad"><a href="#" class="serch_tip">订酒店上京东 </a></span>
+						</div>
+					</li>
+					<li class="hotel_content">
+						<div class="hotel_ads clearfix">
+							<span class="ad_left"><a href="#" class="hotel_ad"><img src="../image/hotel1.jpg" alt=""></a></span>
+							<span class="ad_right"><a href="#" class="hotel_ad"><img src="../image/hotel2.jpg" alt=""></a></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

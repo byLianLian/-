@@ -1,0 +1,46 @@
+body{
+	font-size: 12px;
+	font-family: 'Microsoft Yahei';
+	background-color: #f0f3ef;
+}
+body,html{
+	height: auto;
+}
+body,ul,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{
+	padding: 0;
+	margin: 0;
+}
+button{
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #999;
+}
+li{
+	list-style:none;
+}
+li a:hover{
+	color: red;
+}
+em, i{
+	font-style: normal;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+	transition: all ease 0.2s;
+}
+img:hover{
+	opacity: 0.8;
+}
+.clearfix{
+    *zoom:1
+}
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
